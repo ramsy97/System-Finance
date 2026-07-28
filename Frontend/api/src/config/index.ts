@@ -1,8 +1,10 @@
+const env = process.env;
+
 export const config = {
   port: 4000,
-  databaseUrl: process.env.DATABASE_URL || '',
-  jwtSecret: process.env.JWT_SECRET || 'default-secret',
-  jwtExpiresIn: process.env.JWT_EXPIRES_IN || '24h',
-  frontendUrl: process.env.FRONTEND_URL || 'http://localhost:3000',
+  databaseUrl: env.DATABASE_URL,
+  jwtSecret: env.JWT_SECRET,
+  jwtExpiresIn: env.JWT_EXPIRES_IN,
+  frontendUrl: env.FRONTEND_URL,
   uploadDir: '/tmp/uploads',
 };
