@@ -1,17 +1,3 @@
 {
-  "framework": "nextjs",
-  "buildCommand": "npx prisma generate && npx next build",
-  "outputDirectory": ".next",
-  "functions": {
-    "api/index.ts": {
-      "memory": 512,
-      "maxDuration": 30
-    }
-  },
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/index" }
-  ],
-  "env": {
-    "NEXT_PUBLIC_API_URL": "/api"
-  }
+  "framework": "nextjs"
 }
