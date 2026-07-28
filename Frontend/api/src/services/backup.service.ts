@@ -4,7 +4,7 @@ import fs from 'fs';
 
 export async function backupDatabase(outputPath?: string): Promise<string> {
   return new Promise((resolve, reject) => {
-    const dbUrl = process.env.DATABASE_URL || '';
+    const dbUrl = '';
     const match = dbUrl.match(/postgresql:\/\/(\w+):(\w+)@(\w+):(\d+)\/(\w+)/);
     if (!match) {
       reject(new Error('Invalid DATABASE_URL format'));

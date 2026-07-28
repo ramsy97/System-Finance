@@ -21,9 +21,7 @@ const app = express();
 
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production'
-    ? [config.frontendUrl, process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : ''].filter(Boolean)
-    : config.frontendUrl,
+  origin: config.frontendUrl,
   credentials: true,
 }));
 app.use(express.json({ limit: '10mb' }));
